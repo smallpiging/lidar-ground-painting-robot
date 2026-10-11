@@ -1,0 +1,27 @@
+amcl:
+  ros__parameters:
+    use_sim_time: false
+    global_frame_id: "map"
+    odom_frame_id: "odom"
+    base_frame_id: "base_link"
+    
+    # 粒子滤波器设置
+    min_particles: 500
+    max_particles: 3000
+    update_min_d: 0.15 # 移动 0.15m 更新一次
+    update_min_a: 0.1  # 旋转 0.1rad 更新一次
+    resample_interval: 1
+    
+    # 传感器模型映射
+    scan_topic: "/pf/scan"
+    laser_model_type: "likelihood_field"
+    laser_max_range: 30.0
+    laser_min_range: 0.3
+    
+    # 运动模型 (您的两轮+万向轮底盘通常适用差分模型)
+    robot_model_type: "nav2_amcl::DifferentialMotionModel"
+    alpha1: 0.2 # 旋转分量噪声
+    alpha2: 0.2
+    alpha3: 0.2
+    alpha4: 0.2
+

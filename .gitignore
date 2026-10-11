@@ -1,0 +1,15 @@
+# ROS 2 编译文件
+build/
+install/
+log/
+
+# Python 临时文件
+__pycache__/
+*.pyc
+
+# 环境配置
+.env
+
+# 编辑器文件
+.vscode/
+.idea/
